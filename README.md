@@ -1,3 +1,3 @@
 # WilSenwish Personal Notes
 
-## Java 基础开发环境搭建指南
+## 1. Java 基础开发环境搭建指南

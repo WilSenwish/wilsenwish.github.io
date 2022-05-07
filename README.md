@@ -3,9 +3,9 @@
 
 # 联系方式
 
-- 手 机：186 **** 2114 （佛山号码）
-- Email：<142****351@qq.com>
-- 微 信 / Q Q：186 **** 2114 / 142****351
+- 手 机：186 7653 2114 （佛山号码）
+- Email：<1425854351@qq.com>
+- 微 信：186 7653 2114
 
 
 # 个人信息
@@ -51,7 +51,7 @@
 - 框架：Spring / SpringMVC / MyBatis / Spring-Cloud / Spring-Cloud-Alibaba
 - 数据库：SQL / MySQL / Redis / MongoDB
 - 开发、构建和部署：Git / IDEA / Maven / Swagger / Jenkins
-- 其他：Linux / Nginx / MQ / UML / Restful
+- 其他：Linux / Nginx / RocketMQ / Dubbo / UML / Restful
 
 
 ---      

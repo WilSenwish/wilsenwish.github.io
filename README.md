@@ -47,10 +47,10 @@
 
 # 技能清单
 
-- 基础：Java / JVM / MVC / AOP / 设计模式 / 多线程 / Node
-- 框架：Spring / SpringMVC / MyBatis / Activiti / Sping-Data / Express
-- 数据库：SQL / MySQL / Redis / MongoDB / Sequelize
-- 开发、构建和部署：Git / Eclipse / WebStorm / Maven / Swagger / Jenkins
+- 基础：Java / JVM / MVC / AOP / 设计模式 / 多线程
+- 框架：Spring / SpringMVC / MyBatis / Spring-Cloud / Spring-Cloud-Alibaba
+- 数据库：SQL / MySQL / Redis / MongoDB
+- 开发、构建和部署：Git / IDEA / Maven / Swagger / Jenkins
 - 其他：Linux / Nginx / MQ / UML / Restful
 
 
@@ -58,6 +58,6 @@
 # 致谢
 感谢您花时间阅读我的简历，期待能有机会和您共事。
 
-_简历网络地址： <http://www.wilsenwish.com/>_
+_简历网络地址： <https://wilsenwish.github.io/>_
 
 

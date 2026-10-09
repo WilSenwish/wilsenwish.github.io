@@ -7,8 +7,8 @@
 ## 个人信息
 
 - **年龄**：34 岁
-- **手机 / 微信**：186 7653 2114
-- **Email**：1425854351@qq.com
+- **手机 / 微信**：186 **** 2114
+- **Email**：142****351@qq.com
 - **政治面貌**：中共党员
 - **学历**：北京信息科技大学 · 软件工程 · 本科
 - **工作年限**：11 年
@@ -84,15 +84,22 @@
 - **技术亮点**：多维数据聚合查询、报告册 PDF 批量生成（jodconverter + poi-tl）、QLExpress 规则引擎驱动评价算法、Redis 多层缓存 + RocketMQ 异步削峰、隐私数据加密改造。
 - **成果**：全量 **80 万条**学生报告批量生成压测约 **5 小时**（支持多机分片提速），统计类慢接口响应由十秒级降至毫秒级，单区域最高支撑 **240 万 + 学生用户**平稳运行。
 
+### 吉林市互联网政务平台（2017.03 - 2018.05）| 后台开发
+
+- **背景**：市级政务线上化项目，包含互联网申报端、政务审批端及两端移动 APP，需支撑多部门、多事项的差异化审批流程。
+- **职责**：负责后台开发，基于 **Java + Node.js** 双技术栈参与申报端与审批端业务流程落地。
+- **技术亮点**：独立调研 **Activiti** 工作流引擎，将流程节点的任务分配、审批操作、流向控制、批注与附件、任务期限与状态实现**批量配置化**，支撑多部门审批流程的灵活配置与快速复用。
+- **结果**：项目因客户侧原因未最终上线、未投入生产运行；本人核心交付为审批流程配置化模型的完整设计与实现。
+
 ---
 
 ## 开源与技术影响
 
 - **技术文章**：
-  - [软件工程的核心哲学原理与方法论 · 终篇（道法术器势 × 九种思路）](https://wilsenwish.github.io/Java-Spring-AI/cppam-of-software-engineering/index.html) —— 以「道·法·术·器·势」五层框架与九种思路，体系化梳理软件工程的哲学根基<br>地址：<https://wilsenwish.github.io/Java-Spring-AI/cppam-of-software-engineering/index.html>
-  - [工程智慧的认知地图：53 条定律 × 149 条方法论 × 道·法·术·器·势](https://wilsenwish.github.io/Java-Spring-AI/Laws-Theories-Principles-and-Patterns/index.html) —— 汇总 53 条工程定律与 149 条方法论，绘制工程智慧的认知地图<br>地址：<https://wilsenwish.github.io/Java-Spring-AI/Laws-Theories-Principles-and-Patterns/index.html>
-  - [软件设计原则：26 条写给开发者的设计准则](https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/principles/index.html) —— 归纳 26 条设计准则，指导可维护、可扩展的代码设计<br>地址：<https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/principles/index.html>
-  - [设计模式：从 23 到 192 的工程语言演进](https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/java-design-patterns/index.html) —— 从经典 23 种到 192 种，梳理设计模式的工程语言演进脉络<br>地址：<https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/java-design-patterns/index.html>
+  - [软件工程的核心哲学原理与方法论 · 终篇（道法术器势 × 九种思路）](https://wilsenwish.github.io/Java-Spring-AI/cppam-of-software-engineering/index.html) —— 以「道·法·术·器·势」五层框架与九种思路，体系化梳理软件工程的哲学根基<br>链接：<https://wilsenwish.github.io/Java-Spring-AI/cppam-of-software-engineering/index.html>
+  - [工程智慧的认知地图：53 条定律 × 149 条方法论 × 道·法·术·器·势](https://wilsenwish.github.io/Java-Spring-AI/Laws-Theories-Principles-and-Patterns/index.html) —— 汇总 53 条工程定律与 149 条方法论，绘制工程智慧的认知地图<br>链接：<https://wilsenwish.github.io/Java-Spring-AI/Laws-Theories-Principles-and-Patterns/index.html>
+  - [软件设计原则：26 条写给开发者的设计准则](https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/principles/index.html) —— 归纳 26 条设计准则，指导可维护、可扩展的代码设计<br>链接：<https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/principles/index.html>
+  - [设计模式：从 23 到 192 的工程语言演进](https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/java-design-patterns/index.html) —— 从经典 23 种到 192 种，梳理设计模式的工程语言演进脉络<br>链接：<https://wilsenwish.github.io/Java-Spring-AI/java-design-patterns-principles/java-design-patterns/index.html>
 
 ---
 

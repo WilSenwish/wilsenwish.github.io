@@ -2,6 +2,9 @@
 
 > 11 years in Java backend · 8 years in the education assessment domain · National Senior Certifications: System Architect & System Analyst
 
+> **Archived**: This file is a historical archive. The resume system has been superseded by the four deliverables under `docs/` (V1 / V2 / V3 / condensed).
+> Figures in this file reflect an outdated baseline and must not be cited; see `docs/README-RESUME-GUIDE.md` for version selection and canonical definitions.
+
 ---
 
 ## Personal Information

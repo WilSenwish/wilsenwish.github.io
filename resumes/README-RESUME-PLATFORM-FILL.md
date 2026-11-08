@@ -10,7 +10,7 @@
 - **Email**：142\*\*\*\*351@qq.com
 - **居住地址**：北京 · 立水桥｜**期望城市**：北京
 - **学历**：北京信息科技大学 · 软件工程 · 本科（2010.09 - 2014.06）
-- **求职意向**：教育信息化 · Java 资深后端（平台方向）
+- **求职意向**：Java 资深后端
 - **期望薪资**：面议
 
 ---
@@ -27,7 +27,7 @@
 ## 工作经历
 
 ### 沐华清诚（北京）教育科技发展有限公司 ｜ 2019.01 - 至今
-**Java 开发工程师 → 技术骨干（核心研发 / 模块 Owner）**
+**Java 高级开发工程师**
 
 - **业务交付**：以中学学生综评为基底，拓展小学综评 / 职教评价 / 教师评价 / 人工智能实验班共 5 套业务系统；年均交付约 40 项需求，约 40% 担任 Owner。
 - **平台建设**：独立推进微服务底座（4 个服务 / 3 台机器）与公共组件（可监控线程池 / 通用工具库 / Web-Starter / 蜜罐防护），被 10+ 个项目复用；各业务系统无需重复实现同一套能力。
@@ -62,14 +62,14 @@
 1. **架构与数据**：服务端架构、库表与核心模块；MySQL 主数据、MongoDB 评价记录、Redis + Caffeine 缓存。
 2. **性能与稳定**：慢日志、执行计划、APM 定位，补索引、分页批处理、预聚合表；慢接口十秒级→毫秒级，80 万条报告册 10h→5h。
 3. **跑批故障复盘**：成绩统计卡死并打满堆内存，慢 SQL 三类（缺索引、索引失效、未分批查询）；补组合索引、修正索引失效写法、分页批处理、分批后稳定。
-4. **安全与能力沉淀**：隐私数据加密 890 万+ 条；Redis 滑动窗口限流 + 蜜罐防护；QLExpress 规则配置化热更新，用于 3 套系统。
+4. **安全与能力沉淀**：隐私数据加密 890 万+ 条；Redis 滑动窗口限流 + 蜜罐防护；QLExpress 统计规则动态配置，用于 3 套系统。
 
 **结果**：8 实例集中填报无超时告警；系统稳定承载 13.6 亿+ 条记录。
 
 ### 项目 2｜基础设施与公共能力建设（微服务底座 + 公共组件）｜2019.06 - 至今
 **独立负责人**
 
-**技术栈**：Spring Cloud Gateway、Nacos、OpenFeign、TransmittableThreadLocal、JWT、RocketMQ
+**技术栈**：Spring Cloud Gateway、Nacos、OpenFeign、TransmittableThreadLocal
 
 **项目描述**：独立负责两条基础设施线：微服务底座支撑教师评价系统完成单体 → 微服务演进（4 个服务 / 3 台机器）；公共组件以 Starter 接入 10+ 个项目。
 
@@ -83,7 +83,7 @@
 ### 项目 3｜自研 APM 可观测性平台｜2019.06 - 至今
 **独立全栈开发**
 
-**技术栈**：Java、SPI、RocketMQ、Protostuff、MongoDB、Vue
+**技术栈**：Java、SPI、Spring Boot、RocketMQ、Protostuff、MongoDB、Redis、Vue
 
 **项目描述**：因客户机房网络差异，调研 SkyWalking / Prometheus / OpenTelemetry 后自研轻量 APM（微内核 + SPI），采集 Trace、接口性能、JVM / 线程池、异常与业务事件。
 
@@ -100,7 +100,7 @@
 
 - **后端与数据**：Java 主栈，Spring Boot 2.x，Spring Cloud（Gateway / Nacos / OpenFeign），MySQL 索引与慢查询治理，MongoDB 复制集，Redis 两级缓存，RocketMQ ACL 改造，QLExpress，poi-tl + JODConverter；Maven / Nexus / Linux / Nginx；Docker 用于本地开发环境依赖编排。
 - **可观测性与诊断**：独立自研 APM（微内核 + 插件、分布式 Trace、告警闭环）；用 MAT 做 OOM 与堆内存分析（Dominator Tree / Retained Heap / Path to GC Roots）；熟悉 Sentinel 限流熔断与 Seata 分布式事务的实现思路与适用边界（无生产落地），生产接口限流为自研 Redis 滑动窗口实现。
-- **其他语言与 AI 实践**：Go 能读懂常规服务代码并做小规模改造（语法层，尚未用于生产项目）；Python 可独立完成后端接口开发、数据处理与报表可视化脚本（FastAPI / NumPy / Pandas / Matplotlib），作为辅助能力使用；JDK 17 / 21 与 Spring Boot 3.x 个人项目验证；AI 辅助研发处于预研与实践阶段，用于需求拆解、方案设计、编码、单元测试与 DDL / 索引脚本产出。
+- **其他语言与 AI 实践**：AI 辅助研发处于预研与实践阶段，用于需求拆解、方案设计、编码、单元测试与 DDL / 索引脚本产出；JDK 17 / 21 与 Spring Boot 3.x 个人项目验证；Python 可独立完成后端接口开发、数据处理与报表可视化脚本（FastAPI / NumPy / Pandas / Matplotlib），作为辅助能力使用；Go 能读懂常规服务代码并做小规模改造（语法层，尚未用于生产项目）。
 
 ---
 

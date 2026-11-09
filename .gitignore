@@ -13,3 +13,6 @@
 .workbuddy/
 docs/
 .DS_Store
+
+# 投递版 PDF 含联系方式明文，禁止入库
+*.pdf

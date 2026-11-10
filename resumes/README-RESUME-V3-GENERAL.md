@@ -117,19 +117,8 @@
 - **中间件与治理**：熟悉 Sentinel 限流熔断与 Seata 分布式事务的实现思路，能判断其在新项目中的适用边界与接入代价，未在生产落地；生产环境的接口限流为自研实现（Redis 滑动窗口、接口级）。
 - **诊断与内存分析**：用 MAT 做 OOM 与堆内存分析，通过 Dominator Tree 定位大对象、以 Retained Heap 判断真实占用、沿 Path to GC Roots 确认引用链。
 - **AI 实践**：AI 辅助研发处于预研与实践阶段：持续跟进 LLM / Function Calling / RAG，Cursor / Codex 用于需求拆解、方案规划与设计、编码、单元测试，并辅助同步产出 DDL 与索引变更脚本，在此过程中沉淀适合自己的 AI 协作 SOP。
-- **工程与交付**：日常使用 Maven / Nexus / Linux / Nginx；Docker 用于本地开发环境依赖编排。具备 JVM 容器化感知（MaxRAMPercentage 与固定 -Xmx 的取舍、容器内堆内存规划），理解 K8s 基础对象（Pod / Deployment / Service）与探针机制。
+- **工程与交付**：日常使用 Maven / Nexus / Linux / Nginx；Docker 用于本地开发环境依赖编排。具备 JVM 容器化感知（MaxRAMPercentage 与固定 -Xmx 的取舍、容器内堆内存规划），理解 K8s 基础对象（Pod / Deployment / Service）与探针机制，有对接 CI/CD 流水线的工程习惯。
 - **其他语言**：Python 可独立完成后端接口开发、数据处理与报表可视化脚本（FastAPI / NumPy / Pandas / Matplotlib），作为辅助能力使用，不承担生产主栈；Go 能读懂常规服务代码并做小规模改造（语法层，尚未用于生产项目）。
-
----
-
-## 开源项目与技术写作
-
-- **代码仓库**：<https://github.com/WilSenwish>
-  - [Multi-Lang-Backend-Showcase](https://github.com/WilSenwish/Multi-Lang-Backend-Showcase) —— Java / Go / Python / Rust / TypeScript 五套同业务场景实现，多语言工程结构与并发模型横向对比
-  - [Spring-WebFlux-Learn](https://github.com/WilSenwish/Spring-WebFlux-Learn) —— Spring MVC / WebFlux 双栈同业务对照实践
-- **技术文章**：
-  - [软件工程智慧的认知地图：53 条定律 × 145 条方法论 × 道·法·术·器·势](https://wilsenwish.github.io/Java-Spring-AI/Software-Engineering-Laws-Theories-Principles-and-Patterns/index.html) —— 把 53 条定律与 145 条方法论放进同一套五层定位：定律回答为什么，法回答按什么框架组织，术回答具体怎么做，器回答用什么落地。
-  - [软件工程的核心哲学原理与方法论（道法术器势 × 九种思路）](https://wilsenwish.github.io/Java-Spring-AI/Software-Engineering-Core-Philosophical-Principles-and-Methodologies/index.html) —— 以五层为纵轴、九种思路为横轴拆解软件工程的认知坐标系，附五层总览主表、层级稳定性与典型错位。
 
 ---
 

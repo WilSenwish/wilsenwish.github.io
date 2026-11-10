@@ -1,4 +1,4 @@
-# 陈俊兵｜Java 资深后端（通用综合版）
+# 陈俊兵｜Java 资深后端
 
 ---
 
@@ -21,7 +21,6 @@
 - **真实生产规模**：为 **8 个客户部署实例**（覆盖省 / 市教育主管单位与单校、机构级客户）提供独立部署，覆盖 7,200+ 所学校、1,350 万+ 师生（学生 1,286 万 / 教师 65 万+）、当前在校学生 500 万+；累计评价记录 **13.6 亿+ 条**（学生端 3.12 亿 / 教师端 10.49 亿），单实例最大 **5.47 亿条**。
 - **性能与稳定性**：慢查询与慢接口治理、两级缓存、异步化、JVM 与线程池调优、报告册批量生成链路优化——统计类慢接口由**十秒级降至毫秒级**；80 万份学生报告册单机批量生成由 **10h 降至 5h**；集中填报时段线上持续峰值 **TPS 3,000 / TPM 18 万（源自自研 APM 接口层分钟级监控）**。
 - **平台化能力**：独立建设 Spring Cloud 微服务底座（4 个服务 / 3 台机器）、业务中台公共组件（可监控线程池 / 通用工具库 / Web-Starter），独立自研 APM 可观测性平台，公共组件被 **10+ 个项目**直接复用。
-- **技术栈**：Java（JVM / GC / 并发 / SPI）、Spring Boot 2.x、Spring Cloud、MySQL、MongoDB、Redis、RocketMQ（ACL 改造）、QLExpress、poi-tl + JODConverter、Linux / Nginx、Docker（本地开发环境依赖编排）。
 
 ---
 
@@ -72,7 +71,24 @@
 
 **结果**：支撑 8 个客户部署实例集中填报，峰值时段核心接口未触发超时告警；系统稳定承载 13.6 亿+ 条评价记录。
 
-### 项目 2｜基础设施与公共能力建设（微服务底座 + 公共组件）｜2019.06 - 至今
+### 项目 2｜自研 APM 可观测性平台｜2019.06 - 至今
+**独立全栈开发（Agent / 服务端 / 管理端 / UI）**
+
+**技术栈**：Java、SPI、Spring Boot、RocketMQ（ACL 改造）、Protostuff、MongoDB、Redis、TransmittableThreadLocal、Actuator、Vue
+
+**项目描述**：业务系统从集中式向分布式演进后，跨服务链路缺乏统一可观测能力。因**机房网络多样性**约束，调研 SkyWalking / Prometheus / OpenTelemetry 后选择自研轻量 APM（微内核 + SPI 插件架构），采集 Trace、日志 / 事件、接口性能、JVM / OS、线程池、异常与业务事件。
+
+**核心工作**
+
+1. **架构设计**：Agent SDK（零代码 / 显式埋点双模式）+ 数据处理中心 + 管理端 + UI；微内核 + SPI 插件按需扩展采集维度，控制接入成本与运行开销。
+2. **链路追踪**：基于 TransmittableThreadLocal 透传 Trace 上下文，解决跨服务层级嵌套；多级采样责任链按接口 / Debug / 预热 / 异常 / 慢事件 / 兜底比例采样。
+3. **上报通道**：**推拉双模**——RocketMQ 主动上报 + 中心端 HTTP / Actuator 端点按需拉取，适配不开放外网的客户内网环境；Protostuff 序列化降低带宽；完成 **RocketMQ ACL 改造**，用于集群整体安全防护。
+4. **稳定性**：采集与上报复用自研可监控线程池，监控自身不拖慢业务链路；异常 / 慢日志邮件预警 + **12 类告警**。
+5. **存储与展示**：链路与指标数据存 MongoDB，管理端与 UI 基于 Vue。
+
+**结果**：覆盖 **17 个业务系统 / 24 个服务 / 47 台机器**（8 个学生综评客户部署实例内，学生综评与考试系统合并计 1 个系统，另含 4 个微服务、小学 / 职教 / AI 实验班 / 校友系统；机器数为去重统计），迭代 30+ 次；告警推送 **< 3min**。
+
+### 项目 3｜基础设施与公共能力建设（微服务底座 + 公共组件）｜2019.06 - 至今
 **独立负责人（设计、实现、发布与持续维护）**
 
 **技术栈**：Spring Cloud Gateway、Nacos、OpenFeign、Ribbon、TransmittableThreadLocal、Caffeine、JWT、Spring Boot Auto-Configuration
@@ -90,34 +106,18 @@
 
 **结果**：教师评价系统完成单体 → 微服务改造并稳定运行（4 个服务 / 3 台机器），具备服务级独立部署、故障边界隔离与水平扩展基础；公共组件被 **10+ 个项目**直接引入，新业务系统从「重复搭建」变为「引入依赖即用」，各业务系统无需重复实现同一套能力，避免代码复制与重复维护。
 
-### 项目 3｜自研 APM 可观测性平台｜2019.06 - 至今
-**独立全栈开发（Agent / 服务端 / 管理端 / UI）**
-
-**技术栈**：Java、SPI、Spring Boot、RocketMQ（ACL 改造）、Protostuff、MongoDB、Redis、TransmittableThreadLocal、Actuator、Vue
-
-**项目描述**：业务系统从集中式向分布式演进后，跨服务链路缺乏统一可观测能力。因**机房网络多样性**约束，调研 SkyWalking / Prometheus / OpenTelemetry 后选择自研轻量 APM（微内核 + SPI 插件架构），采集 Trace、日志 / 事件、接口性能、JVM / OS、线程池、异常与业务事件。
-
-**核心工作**
-
-1. **架构设计**：Agent SDK（零代码 / 显式埋点双模式）+ 数据处理中心 + 管理端 + UI；微内核 + SPI 插件按需扩展采集维度，控制接入成本与运行开销。
-2. **链路追踪**：基于 TransmittableThreadLocal 透传 Trace 上下文，解决跨服务层级嵌套；多级采样责任链按接口 / Debug / 预热 / 异常 / 慢事件 / 兜底比例采样。
-3. **上报通道**：**推拉双模**——RocketMQ 主动上报 + 中心端 HTTP / Actuator 端点按需拉取，适配不开放外网的客户内网环境；Protostuff 序列化降低带宽；完成 **RocketMQ ACL 改造**，用于集群整体安全防护。
-4. **稳定性**：采集与上报复用自研可监控线程池，监控自身不拖慢业务链路；异常 / 慢日志邮件预警 + **12 类告警**。
-5. **存储与展示**：链路与指标数据存 MongoDB，管理端与 UI 基于 Vue。
-
-**结果**：覆盖 **17 个业务系统 / 24 个服务 / 47 台机器**（8 个学生综评客户部署实例内，学生综评与考试系统合并计 1 个系统，另含 4 个微服务、小学 / 职教 / AI 实验班 / 校友系统；机器数为去重统计），迭代 30+ 次；告警推送 **< 3min**。
-
 ---
 
 ## 技术技能
 
 - **后端与架构**：以 Java 为主栈，长期维护 Spring Boot 2.x 大型生产系统（Auto-Configuration 定制、依赖冲突治理、平滑升级评估）；熟悉 JVM / GC 调优、多线程并发与 SPI 扩展；用 Spring Cloud（Gateway / Nacos / OpenFeign）建设微服务底座。
+- **Java 21 / Spring Boot 3.x 迁移评估**：线程池组件与 TTL 上下文透传机制已完成虚拟线程适配路径分析（Pinning 风险识别、ScopedValue 替代可行性）；在个人项目验证 JDK 21 + Spring Boot 3.x 启动与核心链路，具备基于现有 Spring Boot 2.x / JDK 8 生产系统向 21 / 3.x 迁移的评估框架。
 - **可观测性与稳定性**：独立自研 APM 可观测性平台，采用微内核 + 插件架构，落地分布式 Trace、采样责任链与告警闭环；并建设了微服务基础平台、可监控线程池、Web-Starter 与蜜罐防护。
 - **数据与中间件**：MySQL 索引优化与慢查询治理；MongoDB 复制集承载评价记录与统计数据；Redis（Lettuce / 两级缓存）承接热点读；RocketMQ ACL 改造；QLExpress 统计规则配置化引擎；poi-tl + JODConverter 报告册生成。
 - **中间件与治理**：熟悉 Sentinel 限流熔断与 Seata 分布式事务的实现思路，能判断其在新项目中的适用边界与接入代价，未在生产落地；生产环境的接口限流为自研实现（Redis 滑动窗口、接口级）。
 - **诊断与内存分析**：用 MAT 做 OOM 与堆内存分析，通过 Dominator Tree 定位大对象、以 Retained Heap 判断真实占用、沿 Path to GC Roots 确认引用链。
-- **版本与 AI 实践**：JDK 17 / 21 与 Spring Boot 3.x 在个人项目中跑通同业务场景；AI 辅助研发处于预研与实践阶段：持续跟进 LLM / Function Calling / RAG，Cursor / Codex 用于需求拆解、方案规划与设计、编码、单元测试，并辅助同步产出 DDL 与索引变更脚本，在此过程中沉淀适合自己的 AI 协作 SOP。
-- **工程与交付**：日常使用 Maven / Nexus / Linux / Nginx；Docker 用于本地开发环境依赖编排。
+- **AI 实践**：AI 辅助研发处于预研与实践阶段：持续跟进 LLM / Function Calling / RAG，Cursor / Codex 用于需求拆解、方案规划与设计、编码、单元测试，并辅助同步产出 DDL 与索引变更脚本，在此过程中沉淀适合自己的 AI 协作 SOP。
+- **工程与交付**：日常使用 Maven / Nexus / Linux / Nginx；Docker 用于本地开发环境依赖编排。具备 JVM 容器化感知（MaxRAMPercentage 与固定 -Xmx 的取舍、容器内堆内存规划），理解 K8s 基础对象（Pod / Deployment / Service）与探针机制。
 - **其他语言**：Python 可独立完成后端接口开发、数据处理与报表可视化脚本（FastAPI / NumPy / Pandas / Matplotlib），作为辅助能力使用，不承担生产主栈；Go 能读懂常规服务代码并做小规模改造（语法层，尚未用于生产项目）。
 
 ---

@@ -117,7 +117,7 @@
 - **可观测性与稳定性**：独立自研 APM 可观测性平台，采用微内核 + 插件架构，落地分布式 Trace、采样责任链与告警闭环；并建设了微服务基础平台、可监控线程池、Web-Starter 与蜜罐防护。
 - **数据与中间件**：MySQL 索引优化与慢查询治理；MongoDB 复制集承载评价记录与统计数据；Redis（Lettuce / 两级缓存）承接热点读；RocketMQ ACL 改造；QLExpress 统计规则配置化引擎；poi-tl + JODConverter 报告册生成。
 - **工程与交付**：日常使用 Maven / Nexus / Linux / Nginx；Docker 用于本地开发环境依赖编排。具备 JVM 容器化感知（MaxRAMPercentage 与固定 -Xmx 的取舍、容器内堆内存规划），理解 K8s 基础对象（Pod / Deployment / Service）与探针机制，有对接 CI/CD 流水线的工程习惯。
-- **诊断与内存分析**：用 MAT 做 OOM 与堆内存分析，通过 Dominator Tree 定位大对象、以 Retained Heap 判断真实占用、沿 Path to GC Roots 确认引用链；用 Arthas 做线上问题诊断，包括类加载、线程与 GC 排查。
+- **诊断与内存分析**：用 MAT 做 OOM 与堆内存分析，通过 Dominator Tree 定位大对象、以 Retained Heap 判断真实占用、沿 Path to GC Roots 确认引用链。
 - **中间件与治理**：熟悉 Sentinel 限流熔断与 Seata 分布式事务的实现思路，能判断其在新项目中的适用边界与接入代价，未在生产落地。生产环境的接口限流为自研实现（Redis 滑动窗口、接口级）。
 - **其他语言**：Python 可独立完成后端接口开发、数据处理与报表可视化脚本（FastAPI / NumPy / Pandas / Matplotlib），作为辅助能力使用，不承担生产主栈；Go 能读懂常规服务代码并做小规模改造（语法层，尚未用于生产项目）。
 - **AI 实践**：AI 辅助研发处于预研与实践阶段：持续跟进 LLM / Function Calling / RAG，Cursor / Codex 用于需求拆解、方案规划与设计、编码、单元测试，并辅助同步产出 DDL 与索引变更脚本，在此过程中沉淀适合自己的 AI 协作 SOP。

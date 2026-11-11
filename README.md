@@ -7,11 +7,12 @@ Java 资深后端 · 11 年经验 · 教育评价平台 / 分布式平台与可�
 
 ## 简历
 
-| 版本 | 定位 | 文件 |
-| --- | --- | --- |
-| V1 | 教育信息化 · Java 资深后端 / 架构 | [README-RESUME-V1-EDUCATION.md](resumes/README-RESUME-V1-EDUCATION.md) |
-| V2 | 分布式平台 · 可观测性与稳定性 | [README-RESUME-V2-PLATFORM.md](resumes/README-RESUME-V2-PLATFORM.md) |
-| V3 | 通用 Java 资深后端（综合版） | [README-RESUME-V3-GENERAL.md](resumes/README-RESUME-V3-GENERAL.md) |
+| 版本 | 定位                              | 文件 |
+|------|-----------------------------------| --- |
+| V0   | 简版 · Java 资深后端       | [RESUME.md](RESUME.md) |
+| V1   | 教育信息化 · Java 资深后端 / 架构 | [README-RESUME-V1-EDUCATION.md](resumes/README-RESUME-V1-EDUCATION.md) |
+| V2   | 分布式平台 · 可观测性与稳定性     | [README-RESUME-V2-PLATFORM.md](resumes/README-RESUME-V2-PLATFORM.md) |
+| V3   | 通用 Java 资深后端（综合版）      | [README-RESUME-V3-GENERAL.md](resumes/README-RESUME-V3-GENERAL.md) |
 
 三份简历同为使用版本，按投递方向选择：
 
